@@ -1,0 +1,312 @@
+:root {
+  --colorShadeA: rgb(106, 163, 137);
+  --colorShadeB: rgb(121, 186, 156);
+  --colorShadeC: rgb(150, 232, 195);
+  --colorShadeD: rgb(187, 232, 211);
+  --colorShadeE: rgb(205, 255, 232);
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Titillium+Web:wght@400;600;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700");
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Titillium Web", sans-serif;
+  /* background: url(./photos/myProfilePic.jpeg); */
+  background: black;
+  background-repeat: no-repeat;
+  background-size: 1600px 1000px;
+  width: 100vw;
+  height: 100vh;
+}
+
+/* What kind of selector is this? */
+.logo {
+  width: 80px;
+  height: 100%;
+  justify-content: flex-end;
+  padding: 1rem 2rem;
+  pointer-events: none;
+}
+
+.nav-container {
+  display: flex;
+  width: 100%;
+}
+
+.nav-menu {
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+}
+
+header {
+  display: flex;
+  width: 100%;
+  position: absolute;
+}
+
+main {
+  height: auto;
+  width: 100%;
+  display: grid;
+}
+
+.hero {
+  width: 100vw;
+  height: 80vh;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(50% 1fr));
+  /* grid-template-columns: 50% 1fr; */
+  background: url(./photos/myProfilePic.jpeg);
+  box-shadow: inset 0 0 15em 3em #000;
+  align-items: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+.banner {
+  display: flex;
+  width: 100vw;
+  height: 20vh;
+}
+
+/* This is an element within and element selector */
+.nav-link {
+  height: 10%;
+  width: 8.5rem;
+  color: white;
+  font-family: "Titillium Web", sans-serif;
+  letter-spacing: 3px;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  background: transparent;
+  padding: 18px 0 18px;
+  text-decoration: none;
+}
+
+nav {
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+  padding: 1rem 0 0 5rem;
+}
+
+/* This is an ID selector */
+#profile-pic {
+  width: 60%;
+  height: auto;
+  margin: 0 auto;
+  grid-column: 2/3;
+}
+
+h1 {
+  color: white;
+  grid-column: 3/4;
+  padding: 4rem 2rem;
+  font-size: 4rem;
+}
+
+.title {
+  color: white;
+  font-size: 2.5rem;
+  margin: 0;
+}
+
+p {
+  color: white;
+  width: 60%;
+  margin: 0 auto;
+  margin-top: 1.25rem;
+  font-size: 1rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+.small-text {
+  color: white;
+  font-size: 10px;
+  position: absolute;
+  top: 95%;
+  left: 90%;
+}
+
+button {
+  position: absolute;
+  width: 40%;
+  font-family: "Titillium Web", sans-serif;
+  font-size: 20px;
+  border: none;
+  background: transparent;
+  text-align: center;
+  color: white;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  font-weight: bold;
+  top: auto;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2%;
+}
+
+button {
+  display: inline-block;
+  cursor: pointer;
+  outline: none;
+  border: 0;
+  vertical-align: middle;
+  text-decoration: none;
+  font-size: 1.5rem;
+  color: var(--colorShadeA);
+  font-weight: 700;
+  text-transform: uppercase;
+  font-family: inherit;
+}
+
+button.big-button {
+  padding: 0.75em 1.5em;
+  border: 2px solid var(--colorShadeA);
+  border-radius: 1em;
+  background: var(--colorShadeE);
+  transform-style: preserve-3d;
+  transition: all 175ms cubic-bezier(0, 0, 1, 1);
+}
+button.big-button::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--colorShadeC);
+  border-radius: inherit;
+  box-shadow: 0 0 0 2px var(--colorShadeB), 0 0.75em 0 0 var(--colorShadeA);
+  transform: translate3d(0, 0.75em, -1em);
+  transition: all 175ms cubic-bezier(0, 0, 1, 1);
+}
+
+button.big-button:hover {
+  background: var(--colorShadeD);
+  transform: translate(0, 0.375em);
+}
+
+button.big-button:hover::before {
+  transform: translate3d(0, 0.75em, -1em);
+}
+
+button.big-button:active {
+  transform: translate(0em, 0.75em);
+}
+
+button.big-button:active::before {
+  transform: translate3d(0, 0, -1em);
+
+  box-shadow: 0 0 0 2px var(--colorShadeB), 0 0.25em 0 0 var(--colorShadeB);
+}
+
+button:focus {
+  outline: none;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+::selection {
+  background: #ffb7b7; /* WebKit/Blink Browsers */
+}
+::-moz-selection {
+  background: #ffb7b7; /* Gecko Browsers */
+}
+
+.menu-toggle .bar {
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  transition: all 0.3s ease-in-out;
+  background: white;
+}
+
+@media screen and (max-width: 768px) {
+  header {
+    position: relative;
+  }
+  .nav-menu {
+    flex-direction: column;
+    position: absolute;
+    top: 100px;
+    padding: 0;
+    z-index: 999;
+    background-color: black;
+    left: -100%;
+    opacity: 0;
+    transition: all 0.5s ease;
+  }
+
+  .nav-menu.active {
+    background: #ffb7b7;
+    left: 0;
+
+    opacity: 1;
+    transition: all 0.5s ease;
+  }
+  .nav-link {
+    font-size: 1.2rem;
+    text-align: center;
+    line-height: 30px;
+    width: 100%;
+    display: table;
+  }
+  .nav-link:hover {
+    background-color: #ffb7b7;
+    color: white;
+    transition: all 0.4s ease-out;
+  }
+  .nav-link-btn {
+    border: none;
+    padding: 0;
+    border-radius: 0;
+    background: black;
+    color: white;
+    transition: all 0.4s ease-out;
+  }
+
+  .nav-link-btn:hover {
+    border: none;
+    padding: 0;
+    border-radius: 0;
+    background: black;
+    color: white;
+    transition: all 0.4s ease-out;
+  }
+  #mobile-menu {
+    position: absolute;
+    top: 20%;
+    left: 5%;
+    transform: translate(5%, 20%);
+  }
+  .menu-toggle .bar {
+    display: block;
+    cursor: pointer;
+  }
+
+  .menu-toggle:hover {
+    cursor: pointer;
+  }
+  #mobile-menu.is-active .bar:nth-child(2) {
+    opacity: 0;
+  }
+  #mobile-menu.is-active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  #mobile-menu.is-active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+}
