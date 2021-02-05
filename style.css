@@ -31,6 +31,12 @@ body {
   height: 100vh;
   overflow-x: hidden;
   color: #fff;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+body::-webkit-scrollbar {
+  display: none;
 }
 
 section {
@@ -581,6 +587,13 @@ li {
   display: grid;
   grid-template-columns: 40% 1fr;
   grid-gap: 20px;
+  padding: 100px 0 100px 0;
+}
+
+.resume-container {
+  height: auto;
+  width: 100%;
+  position: relative;
   padding: 100px 0 100px 0;
 }
 
