@@ -7,42 +7,91 @@
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
-    <header>
-      <div class="nav-container">
-        <nav>
-          <div class="menu-toggle" id="mobile-menu">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-          </div>
-          <div class="nav-menu">
-            <a class="nav-link" href="./index.html">Home</a>
-            <a class="nav-link" href="./resume/resume.html">Resume</a>
-            <a class="nav-link" href="./about/about.html">About Me</a>
-            <a class="nav-link" href="./gallery/gallery.html">My Work</a>
-            <a class="nav-link" href="https://medium.com/@stenefra">My Blog</a>
-            <a class="nav-link" href="./getintouch/contact.html">Contact Me</a>
-          </div>
-        </nav>
-      </div>
-      <img src="./photos/new-aca-logo.png" class="logo" alt="austin coding academy logo" />
-    </header>
+    <div id="header" class="nav-container">
+      <nav>
+        <div class="menu-toggle" id="mobile-menu">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+        <div class="nav-menu">
+          <a class="nav-link" href="#header">Home</a>
+          <a class="nav-link" href="#resume-section">Resume</a>
+          <a class="nav-link" href="#about-section">About Me</a>
+          <a class="nav-link" href="#portfolio-section">My Work</a>
+          <a class="nav-link" href="#contact-section">Contact Me</a>
+        </div>
+      </nav>
+    </div>
     <main>
-      <section class="hero">
-        <!-- <img src="./photos/myProfilePic.jpeg" id="profile-pic" alt="Head shot of Me"> -->
-        <h1>Scott Tenefrancia<br /><span class="title">Student of Web Development</span></h1>
-
-        <!-- <a class="small-text" href="https://austincodingacademy.com/">© Austin Coding Academy</a> -->
-      </section>
-      <section class="banner">
-        <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere ad, voluptatum voluptatibus possimus illum debitis minus tempore. Consectetur voluptate asperiores voluptatem amet temporibus inventore.</p>
-        <br /> -->
-        <a href="./gallery/gallery.html"
-          ><button class="big-button" id="portfolio">Explore my work <i class="far fa-arrow-alt-circle-down"></i></button
+      <div class="hero">
+        <!-- <img class="person" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/590856/person.png" data-depth="0.10" /> -->
+        <img class="bg" src="./photos/geometric-background.png" data-depth="0.34" />
+        <img class="snow" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/590856/snow.png" data-depth="0.24" />
+        <div class="hero-text">
+          <h1 class="hero-title" data-depth="0.64">WELCOME!</h1>
+          <h3 class="hero-sub" data-depth="0.6">Scroll to check out my work.</h3>
+        </div>
+        <a href="#about-section"
+          ><svg version="1.1" id="mouse-icon" data-depth="0.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 75" xml:space="preserve">
+            <path id="outline" fill="none" stroke="#FFFFFF" stroke-width="3" stroke-miterlimit="10" d="M20.434 61.208h0c-9.665 0-17.5-7.835-17.5-17.5v-25c0-9.665 7.835-17.5 17.5-17.5h0c9.665 0 17.5 7.835 17.5 17.5v25c0 9.665-7.835 17.5-17.5 17.5z" />
+            <circle id="scroll" fill="#FFFFFF" cx="20.434" cy="14.626" r="4" /></svg
         ></a>
+      </div>
+      <div class="slider-container">
+        <div class="o-slider"></div>
+        <div class="p-slider"></div>
+        <div class="b-slider"></div>
+      </div>
+      <div class="slider"></div>
+
+      <section id="about-section">
+        <div class="dots hero-img-backdrop" style="transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d"></div>
+        <div class="about-container">
+          <div class="card">
+            <img class="about-img" src="../photos/aboutme-img.jpeg" alt="photo of me" />
+          </div>
+          <div class="card bio-background"></div>
+          <div class="float card">
+            <h1 class="hi">Hi!</h1>
+            <h1 class="hi hi-line">I'm Scott.</h1>
+
+            <p class="bio">I'm a Web Developer based out of Chicago. <br />Check out my work and hire me please!</p>
+
+            <!-- <a href="../gallery/gallery.html"><button class="big-button">My work =></button></a> -->
+          </div>
+          <div></div>
+        </div>
+      </section>
+      <section id="portfolio-section">
+        <div class="card"><h1 class="section-title">My Work</h1></div>
+        <div class="portfolio-container">
+          <div class="card project-container"></div>
+          <div class="card project-container"></div>
+          <div class="card project-container"></div>
+          <div class="card project-container"></div>
+          <div class="card project-container"></div>
+          <div class="card project-container"></div>
+          <div class="card project-container"></div>
+          <div class="card project-container"></div>
+        </div>
+      </section>
+      <section id="resume-section">
+        <div class="card"><h1 class="">Job 1</h1></div>
+        <div class="card"><h1 class="">Job 2</h1></div>
+        <div class="card"><h1 class="">Job 3</h1></div>
+      </section>
+      <section id="contact-section">
+        <div class="card"><h1 class="">Job 1</h1></div>
+        <div class="card"><h1 class="">Job 2</h1></div>
+        <div class="card"><h1 class="">Job 3</h1></div>
       </section>
     </main>
     <script src="https://kit.fontawesome.com/ad5657ccd2.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/CSSRulePlugin.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/ScrollTrigger.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="./scripts.js"></script>
   </body>
 </html>
