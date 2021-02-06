@@ -6,6 +6,23 @@ menu.addEventListener("click", () => {
   menuLinks.classList.toggle("active")
 })
 
+const newBlue = document.querySelector(".newblue")
+const freelance = document.querySelector(".freelance")
+const newBlueBtn = document.querySelector(".button-one")
+const freelanceBtn = document.querySelector(".button-two")
+
+const blueBtn = () => {
+  newBlue.classList.add("show")
+  newBlueBtn.classList.add("active-btn")
+  freelance.classList.remove("show")
+}
+
+const freeBtn = () => {
+  freelance.classList.add("show")
+  freelanceBtn.classList.add("active-btn")
+  newBlue.classList.remove("show")
+}
+
 const nav = document.querySelector("nav")
 const text = document.querySelector(".hero-title")
 const sub = document.querySelector(".hero-sub")
@@ -126,4 +143,10 @@ $(document).ready(function () {
       )
     }
   })
+})
+
+// Force user to top of screen on refresh
+
+$(document).ready(function () {
+  $(this).scrollTop(0)
 })

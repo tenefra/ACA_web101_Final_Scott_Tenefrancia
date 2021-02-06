@@ -44,6 +44,11 @@ section {
   flex-direction: column;
 }
 
+footer {
+  height: 100vh;
+  width: 100vh;
+}
+
 .section-title {
   font-size: 5rem;
   text-align: center;
@@ -132,8 +137,6 @@ p {
 }
 
 button {
-  position: absolute;
-  width: 40%;
   font-family: "Titillium Web", sans-serif;
   font-size: 20px;
   border: none;
@@ -149,20 +152,6 @@ button {
   margin-left: auto;
   margin-right: auto;
   margin-top: 2%;
-}
-
-button {
-  display: inline-block;
-  cursor: pointer;
-  outline: none;
-  border: 0;
-  vertical-align: middle;
-  text-decoration: none;
-  font-size: 1.5rem;
-  color: var(--colorShadeA);
-  font-weight: 700;
-  text-transform: uppercase;
-  font-family: inherit;
 }
 
 button:focus {
@@ -445,7 +434,7 @@ li {
   left: 0;
   width: 0.5%;
   height: 100vh;
-  transform: translateY(20%);
+  transform: translateY(40%);
 }
 .o-slider {
   background: #fe4432;
@@ -454,7 +443,7 @@ li {
   left: 0;
   width: 0.5%;
   height: 100vh;
-  transform: translateY(20%);
+  transform: translateY(40%);
 }
 .b-slider {
   background: #9fedd7;
@@ -463,7 +452,7 @@ li {
   left: 0;
   width: 0.5%;
   height: 100vh;
-  transform: translateY(20%);
+  transform: translateY(40%);
 }
 
 /* MEDIA QUERIES */
@@ -591,10 +580,30 @@ li {
 }
 
 .resume-container {
-  height: auto;
-  width: 100%;
   position: relative;
-  padding: 100px 0 100px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.jobs-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.jobs-container button {
+  padding: 25px 50px;
+  font-size: 1.2rem;
+  margin: 0;
+  background: #151019;
+  border: 4px solid #12172d;
+}
+
+.jobs-container button:hover {
+  background: #12172d;
 }
 
 #about-section {
@@ -616,6 +625,45 @@ li {
   width: 100%;
   max-width: 30%;
   margin: 25px 15px;
+}
+
+.project-container:hover {
+  transform: translate(20px, -20px);
+  transition: all ease 0.3s;
+}
+
+.project-container > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.project-container > ul,
+li {
+  list-style-type: circle;
+  display: list-item;
+}
+
+.newblue {
+  width: 70%;
+  padding: 20px 40px;
+  background: #12172d;
+  display: none;
+}
+
+.freelance {
+  width: 70%;
+  padding: 40px 40px;
+  background: #12172d;
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+.active-btn {
+  background: #12172d;
 }
 
 .hero-img-backdrop {
