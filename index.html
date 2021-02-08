@@ -16,9 +16,9 @@
         </div>
         <div class="nav-menu">
           <a class="nav-link" href="#header">Home</a>
-          <a class="nav-link" href="#resume-section">Resume</a>
           <a class="nav-link" href="#about-section">About Me</a>
           <a class="nav-link" href="#portfolio-section">My Work</a>
+          <a class="nav-link" href="#resume-section">Resume</a>
           <a class="nav-link" href="#contact-section">Contact Me</a>
         </div>
       </nav>
@@ -53,8 +53,8 @@
           </div>
           <div class="card bio-background"></div>
           <div class="float card">
-            <h1 class="hi">Hi!</h1>
-            <h1 class="hi hi-line">I'm Scott.</h1>
+            <h1 class="hi">Scott Tenefrancia,</h1>
+            <h1 class="hi hi-line">Front-End Developer</h1>
 
             <p class="bio">I'm a Web Developer based out of Chicago. <br />Check out my work and hire me please!</p>
 
@@ -66,7 +66,10 @@
       <section id="portfolio-section">
         <div class="card"><h1 class="section-title">My Work</h1></div>
         <div class="portfolio-container">
-          <div class="card project-container"></div>
+          <div class="card project-container">
+            <img src="./photos/trivia.png" style="width: 100%; height: 100%; object-fit: cover" />
+          </div>
+
           <div class="card project-container"></div>
           <div class="card project-container"></div>
           <div class="card project-container"></div>
@@ -78,25 +81,44 @@
       </section>
       <section id="resume-section">
         <div class="resume-container">
-          <div class="card" style="opacity: 1">
-            <h1 class="">Job 1</h1>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eaque nulla eum temporibus nisi perspiciatis necessitatibus. Aliquam, doloremque quas. Impedit ab porro labore. Minima error ad omnis fuga iusto similique voluptate!</p>
+          <div class="jobs-container">
+            <div class="card"><button onclick="blueBtn()" class="button-one">Design and Development Manager</button></div>
+            <div class="card">
+              <button onclick="freeBtn()" class="button-two">Freelance Developer</button>
+            </div>
           </div>
-          <div class="card" style="opacity: 1">
-            <h1 class="">Job 2</h1>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eaque nulla eum temporibus nisi perspiciatis necessitatibus. Aliquam, doloremque quas. Impedit ab porro labore. Minima error ad omnis fuga iusto similique voluptate!</p>
+          <div class="newblue">
+            <h2>Design and Development Manager</h2>
+            <br />
+            <h4>New Blue Interactive | Washington, D.C.</h4>
+            <br />
+            <ul>
+              <li>Managed development for websites, campaign branding, and CRM user interface design.</li>
+              <li>Developed CSS, with SASS and Bootstrap, JavaScript, and PHP on back-end for Wordpress websites.</li>
+              <li>Created and managed Wordpress themes.</li>
+              <li>Experience with GSAP.</li>
+              <li>Experience with React.</li>
+              <li>Use of Gulp for task automation.</li>
+              <li>Developed HTML and CSS email templates and action pages used company wide on multiple CRMs.</li>
+              <li>Git and GitHub version control.</li>
+              <li>Wireframe mockup and design.</li>
+              <li>Managed digital programs for U.S. Senate and House of Representatives campaigns, state races and political action committees.</li>
+              <li>Content for email programs [written language, graphics, HTML/ CSS template design], acquisition through Facebook/Google/etc., accounting through Excel, daily communication with clientele, audience targeting and financial projections.</li>
+            </ul>
           </div>
-          <div class="card" style="opacity: 1">
-            <h1 class="">Job 3</h1>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eaque nulla eum temporibus nisi perspiciatis necessitatibus. Aliquam, doloremque quas. Impedit ab porro labore. Minima error ad omnis fuga iusto similique voluptate!</p>
+          <div class="freelance">
+            <h2>Freelance Developer and Designer</h2>
+            <ul>
+              <li>Developed websites for local businesses and nonprofits.</li>
+              <li>Designed branding and display ads.</li>
+            </ul>
           </div>
         </div>
       </section>
-      <section id="contact-section">
-        <div class="card"><h1 class="">Job 1</h1></div>
-        <div class="card"><h1 class="">Job 2</h1></div>
-        <div class="card"><h1 class="">Job 3</h1></div>
-      </section>
+      <!-- <section id="contact-section">
+        <div class="card"><button>Job 1</button></div>
+        <div class="card"><button>Job 2</button></div>
+      </section> -->
     </main>
     <script src="https://kit.fontawesome.com/ad5657ccd2.js" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
