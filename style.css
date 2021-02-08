@@ -628,8 +628,10 @@ li {
 }
 
 .project-container:hover {
-  transform: translate(20px, -20px);
+  transform: translateY(-20px);
   transition: all ease 0.3s;
+  filter: brightness(0.5);
+  filter: drop-shadow(10px #000);
 }
 
 .project-container > img {
@@ -649,6 +651,7 @@ li {
   padding: 20px 40px;
   background: #12172d;
   display: none;
+  transition: all ease 1s;
 }
 
 .freelance {
@@ -656,6 +659,7 @@ li {
   padding: 40px 40px;
   background: #12172d;
   display: none;
+  transition: all ease 1s;
 }
 
 .show {
@@ -705,7 +709,7 @@ li {
 
 .hi {
   color: white;
-  font-size: 7rem;
+  font-size: 4rem;
   margin: 0;
   line-height: 7rem;
 }
@@ -731,3 +735,85 @@ li {
 }
 
 /* END ABOUT PAGE */
+
+/* MEDIA QUERIES */
+@media screen and (max-width: 1191px) {
+  .hero-title {
+    font-size: 5rem;
+  }
+  #mouse-icon {
+    bottom: 14%;
+  }
+}
+@media screen and (max-width: 891px) {
+  .hero-title {
+    font-size: 4.5rem;
+  }
+  #mouse-icon {
+    bottom: 12%;
+    width: 30px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .hero-title {
+    font-size: 3.5rem;
+  }
+  #mouse-icon {
+    bottom: 10%;
+  }
+  .about-container {
+    width: 100%;
+    position: relative;
+    flex-direction: column;
+    display: flex;
+  }
+  .bio-background {
+    display: none;
+  }
+
+  .hero-img-backdrop {
+    display: none;
+  }
+
+  .about-img {
+    width: 100%;
+  }
+
+  .portfolio-container {
+    flex-direction: column;
+  }
+
+  .project-container {
+    max-width: 100%;
+    width: auto;
+  }
+
+  .jobs-container {
+    flex-direction: column;
+  }
+
+  .hero-text {
+    text-align: center;
+    top: 40px;
+  }
+
+  .bg {
+    height: 130%;
+  }
+  .hero {
+    overflow: inherit;
+  }
+
+  .hero::after {
+    background: none;
+  }
+
+  #mouse-icon {
+    display: none;
+  }
+}
+@media screen and (max-width: 575px) {
+  .hero-title {
+    font-size: 3rem;
+  }
+}
