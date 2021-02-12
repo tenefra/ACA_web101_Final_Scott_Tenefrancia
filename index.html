@@ -8,43 +8,46 @@
   </head>
   <body>
     <div id="header" class="nav-container">
-      <nav>
+      <nav id="mynav">
         <div class="menu-toggle" id="mobile-menu">
           <span class="bar"></span>
           <span class="bar"></span>
           <span class="bar"></span>
         </div>
-        <div class="nav-menu">
+        <!-- <div class="nav-menu">
           <a class="nav-link" href="#header">Home</a>
           <a class="nav-link" href="#about-section">About Me</a>
           <a class="nav-link" href="#portfolio-section">My Work</a>
           <a class="nav-link" href="#resume-section">Resume</a>
           <a class="nav-link" href="#contact-section">Contact Me</a>
-        </div>
+        </div> -->
+        <ul class="nav-menu">
+          <a href="#header"><li class="nav-link">Home</li></a>
+          <a href="#about-section"><li class="nav-link">About Me</li></a>
+          <a href="#portfolio-section"><li class="nav-link">My Work</li></a>
+          <a href="#resume-section"><li class="nav-link">Resume</li></a>
+          <a href="#contact-section"><li class="nav-link">Contact Me</li></a>
+        </ul>
       </nav>
     </div>
     <main>
-      <div class="hero">
-        <!-- <img class="person" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/590856/person.png" data-depth="0.10" /> -->
-        <img class="bg" src="./photos/geometric-background.png" data-depth="0.34" />
-        <img class="snow" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/590856/snow.png" data-depth="0.24" />
-        <div class="hero-text">
-          <h1 class="hero-title" data-depth="0.64">WELCOME!</h1>
-          <h3 class="hero-sub" data-depth="0.6">Scroll to check out my work.</h3>
-        </div>
-        <a href="#about-section"
-          ><svg version="1.1" id="mouse-icon" data-depth="0.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 75" xml:space="preserve">
-            <path id="outline" fill="none" stroke="#FFFFFF" stroke-width="3" stroke-miterlimit="10" d="M20.434 61.208h0c-9.665 0-17.5-7.835-17.5-17.5v-25c0-9.665 7.835-17.5 17.5-17.5h0c9.665 0 17.5 7.835 17.5 17.5v25c0 9.665-7.835 17.5-17.5 17.5z" />
-            <circle id="scroll" fill="#FFFFFF" cx="20.434" cy="14.626" r="4" /></svg
-        ></a>
-      </div>
       <div class="slider-container">
         <div class="o-slider"></div>
         <div class="p-slider"></div>
         <div class="b-slider"></div>
       </div>
       <div class="slider"></div>
-
+      <img class="bg" src="./photos/geometric-background.png" data-depth="0.34" />
+      <img class="snow" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/590856/snow.png" data-depth="0.24" />
+      <div class="sidebar">
+        <ul class="nav-menu">
+          <a href="#header"><li class="nav-link">Home</li></a>
+          <a href="#about-section"><li class="nav-link">About Me</li></a>
+          <a href="#portfolio-section"><li class="nav-link">My Work</li></a>
+          <a href="#resume-section"><li class="nav-link">Resume</li></a>
+          <a href="#contact-section"><li class="nav-link">Contact Me</li></a>
+        </ul>
+      </div>
       <section id="about-section">
         <div class="dots hero-img-backdrop" style="transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d"></div>
         <div class="about-container">
@@ -56,7 +59,12 @@
             <h1 class="hi">Scott Tenefrancia,</h1>
             <h1 class="hi hi-line">Front-End Developer</h1>
 
-            <p class="bio">I'm a Web Developer based out of Chicago. <br />Check out my work and hire me please!</p>
+            <p class="bio">I'm a Web Developer based out of Chicago. Check out my work and hire me please!</p>
+            <a href="#portfolio-section"
+              ><svg version="1.1" id="mouse-icon" data-depth="0.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 75" xml:space="preserve">
+                <path id="outline" fill="none" stroke="#FFFFFF" stroke-width="3" stroke-miterlimit="10" d="M20.434 61.208h0c-9.665 0-17.5-7.835-17.5-17.5v-25c0-9.665 7.835-17.5 17.5-17.5h0c9.665 0 17.5 7.835 17.5 17.5v25c0 9.665-7.835 17.5-17.5 17.5z" />
+                <circle id="scroll" fill="#FFFFFF" cx="20.434" cy="14.626" r="4" /></svg
+            ></a>
 
             <!-- <a href="../gallery/gallery.html"><button class="big-button">My work =></button></a> -->
           </div>
@@ -75,14 +83,13 @@
           <div class="card project-container"></div>
           <div class="card project-container"></div>
           <div class="card project-container"></div>
-          <div class="card project-container"></div>
-          <div class="card project-container"></div>
         </div>
       </section>
       <section id="resume-section">
-        <div class="resume-container">
+        <div class="card"><h1 class="resume-section-title">My Resume</h1></div>
+        <div class="resume-container card">
           <div class="jobs-container">
-            <div class="card"><button onclick="blueBtn()" class="button-one">Design and Development Manager</button></div>
+            <div class="card button-one active-btn"><button onclick="blueBtn()">Design and Development Manager</button></div>
             <div class="card">
               <button onclick="freeBtn()" class="button-two">Freelance Developer</button>
             </div>
@@ -115,6 +122,7 @@
           </div>
         </div>
       </section>
+      <footer></footer>
       <!-- <section id="contact-section">
         <div class="card"><button>Job 1</button></div>
         <div class="card"><button>Job 2</button></div>
