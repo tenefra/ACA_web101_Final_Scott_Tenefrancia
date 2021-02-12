@@ -26,6 +26,26 @@ const freeBtn = () => {
   newBlue.classList.add("hide")
 }
 
+// contact sliders
+
+const phoneBtn = document.querySelector(".phone")
+const emailBtn = document.querySelector(".email")
+const phoneInfo = document.querySelector(".phone-slider")
+const emailInfo = document.querySelector(".email-slider")
+
+const phoneSlider = () => {
+  emailInfo.classList.remove("slider-active")
+  phoneInfo.classList.toggle("slider-active")
+}
+
+const emailSlider = () => {
+  phoneInfo.classList.remove("slider-active")
+  emailInfo.classList.toggle("slider-active")
+}
+
+phoneBtn.addEventListener("click", phoneSlider)
+emailBtn.addEventListener("click", emailSlider)
+
 const nav = document.querySelector("nav")
 const text = document.querySelector(".hero-title")
 const sub = document.querySelector(".hero-sub")

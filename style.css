@@ -89,6 +89,15 @@ footer {
   width: 100%;
 }
 
+.contact {
+  display: flex;
+  flex-direction: row;
+}
+
+.contact-item {
+  margin: 0 20px;
+}
+
 header {
   display: flex;
   width: 100%;
@@ -516,6 +525,42 @@ li {
   margin: 0 auto;
   width: 80%;
   z-index: 2;
+}
+
+.phone-slider {
+  position: absolute;
+  right: -600px;
+  top: 60px;
+  background: rgb(18, 23, 45, 0.5);
+  border: 3px solid white;
+  border-radius: 4px;
+  font-size: 1.8rem;
+  padding: 10px 180px 10px 80px;
+  transition: all 1s ease-in-out;
+  -webkit-transition: all 1s ease-in-out;
+  -moz-transition: all 1s ease-in-out;
+  -o-transition: all 1s ease-in-out;
+  -ms-transition: all 1s ease-in-out;
+}
+
+.email-slider {
+  position: absolute;
+  right: -600px;
+  top: 60px;
+  background: rgb(18, 23, 45, 0.5);
+  border: 3px solid white;
+  border-radius: 4px;
+  font-size: 1.8rem;
+  padding: 10px 180px 10px 80px;
+  transition: all 1s ease-in-out;
+  -webkit-transition: all 1s ease-in-out;
+  -moz-transition: all 1s ease-in-out;
+  -o-transition: all 1s ease-in-out;
+  -ms-transition: all 1s ease-in-out;
+}
+
+.slider-active {
+  right: -20px;
 }
 
 /* END ABOUT PAGE */
