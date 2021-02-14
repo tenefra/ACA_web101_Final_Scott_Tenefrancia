@@ -105,6 +105,19 @@ ScrollTrigger.batch(".dots", {
   // }
 })
 
+// Sidebar Reveal JavaScript
+
+const asideReveal = () => {
+  if (window.scrollY >= 500) {
+    aside.classList.add("is-visible")
+  } else {
+    aside.classList.remove("is-visible")
+  }
+}
+
+const aside = document.querySelector(".aside")
+window.addEventListener("scroll", asideReveal)
+
 // Smooth Scroll Jquery
 
 $(document).ready(function () {
